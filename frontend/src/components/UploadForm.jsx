@@ -23,7 +23,7 @@ export default function UploadForm() {
     try {
       setLoading(true);
       const res = await axios.post(
-        "http://localhost:5000/api/products/match",
+     `${import.meta.env.VITE_API_URL}/api/products/match`,
         formData,
         { headers: { "Content-Type": "multipart/form-data" } }
       );
